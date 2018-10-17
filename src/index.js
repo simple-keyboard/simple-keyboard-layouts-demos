@@ -18,6 +18,13 @@ let keyboard = new Keyboard({
   layout: layout
 });
 
+/**
+ * Update simple-keyboard when input is changed directly
+ */
+document.querySelector(".input").addEventListener("change", event => {
+  keyboard.setInput(event.target.value);
+});
+
 function onChange(input) {
   document.querySelector(".input").value = input;
   console.log("Input changed", input);
