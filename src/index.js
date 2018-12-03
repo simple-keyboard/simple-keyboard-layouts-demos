@@ -1,16 +1,12 @@
-/**
- * simple-keyboard documentation
- * https://github.com/hodgef/simple-keyboard
- */
-
 import Keyboard from "simple-keyboard";
 import "simple-keyboard/build/css/index.css";
+import "./index.css";
 
 /**
  * Available layouts
  * https://github.com/hodgef/simple-keyboard-layouts/tree/master/src/lib/layouts
  */
-import layout from "simple-keyboard-layouts/build/layouts/japanese";
+import layout from "simple-keyboard-layouts/build/layouts/english";
 
 let keyboard = new Keyboard({
   onChange: input => onChange(input),
@@ -25,6 +21,8 @@ document.querySelector(".input").addEventListener("input", event => {
   keyboard.setInput(event.target.value);
 });
 
+console.log(keyboard);
+
 function onChange(input) {
   document.querySelector(".input").value = input;
   console.log("Input changed", input);
@@ -34,12 +32,12 @@ function onKeyPress(button) {
   console.log("Button pressed", button);
 
   /**
-   * Shift functionality
+   * If you want to handle the shift and caps lock buttons
    */
-  if (button === "{lock}" || button === "{shift}") handleShiftButton();
+  if (button === "{shift}" || button === "{lock}") handleShift();
 }
 
-function handleShiftButton() {
+function handleShift() {
   let currentLayout = keyboard.options.layoutName;
   let shiftToggle = currentLayout === "default" ? "shift" : "default";
 
