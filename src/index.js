@@ -6,7 +6,7 @@ import "./index.css";
  * Available layouts
  * https://github.com/hodgef/simple-keyboard-layouts/tree/master/src/lib/layouts
  */
-import layout from "simple-keyboard-layouts/build/layouts/english";
+import layout from "simple-keyboard-layouts/build/layouts/chinese";
 
 let keyboard = new Keyboard({
   onChange: input => onChange(input),
