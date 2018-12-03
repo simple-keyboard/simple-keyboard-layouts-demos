@@ -1,12 +1,17 @@
-import Keyboard from "simple-keyboard";
-import "simple-keyboard/build/css/index.css";
-import "./index.css";
+
+/**
+ * simple-keyboard documentation
+ * https://github.com/hodgef/simple-keyboard
+ */
+
+let Keyboard = window.SimpleKeyboard.default;
+let KeyboardLayouts = window.SimpleKeyboardLayouts.default;
 
 /**
  * Available layouts
  * https://github.com/hodgef/simple-keyboard-layouts/tree/master/src/lib/layouts
  */
-import layout from "simple-keyboard-layouts/build/layouts/english";
+let layout = new KeyboardLayouts().get("japanese");
 
 let keyboard = new Keyboard({
   onChange: input => onChange(input),
