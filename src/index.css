@@ -5,6 +5,7 @@ input {
   font-size: 20px;
   border: none;
   box-sizing: border-box;
+  direction: rtl;
 }
 
 .simple-keyboard {
