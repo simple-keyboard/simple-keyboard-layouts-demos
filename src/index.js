@@ -11,7 +11,8 @@ import layout from "simple-keyboard-layouts/build/layouts/sindhi";
 let keyboard = new Keyboard({
   onChange: input => onChange(input),
   onKeyPress: button => onKeyPress(button),
-  layout: layout
+  layout: layout,
+  rtl: true
 });
 
 /**
