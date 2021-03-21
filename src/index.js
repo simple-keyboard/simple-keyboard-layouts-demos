@@ -16,7 +16,7 @@ let layout = new KeyboardLayouts().get("japanese");
 let keyboard = new Keyboard({
   onChange: input => onChange(input),
   onKeyPress: button => onKeyPress(button),
-  layout: layout
+  ...layout
 });
 
 /**
